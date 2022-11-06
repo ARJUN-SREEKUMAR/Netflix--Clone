@@ -6,25 +6,11 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 const API_KEY =apiKey
 function Banner() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => setCount((oldCount) => oldCount + 1), 1000);
-
-    return () => {
-      clearInterval(id);
-    };
-    console.log(count);
-  }, []);
-
-
-
-
   const [movie, setMovie] = useState()
   useEffect(() => {
     axios.get(`/trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
-      console.log(response.data.results[count])
-      setMovie(response.data.results[count])
+      // console.log(response.data.results[0])
+      setMovie(response.data.results[0])
     })
 
      
