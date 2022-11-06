@@ -10,6 +10,11 @@
     left: 20px;
     width: 80px;
 }
+.navitems{
+    position: fixed;
+    right:80px;
+    color: #ffff;
+}
 .avatar{
     position: fixed;
     right: 20px;
